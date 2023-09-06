@@ -1,3 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">JasonCalculator</string>
+    <!-- App name used for the launcher icon label -->
+    <string name="app_name">Big Brain Calculator</string>
+
+    <!-- Strings related to the main activity -->
+    <string name="hello_world">Hello, world!</string>
+    <string name="welcome_message">Welcome to Big Brain Calculator!</string>
+
+    <!-- Other strings -->
+    <string name="enter">Enter</string>
+    <string name="del">Del</string>
+    <string name="Continue">Continue</string>
+
 </resources>
