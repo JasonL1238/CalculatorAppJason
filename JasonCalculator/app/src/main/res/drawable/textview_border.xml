@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Optional: Define the background color of the TextView -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Define the border properties -->
+    <stroke
+        android:color="#000000"
+        android:width="2dp" />  <!-- Border width -->
+
+    <!-- Optional: Add some padding -->
+    <padding
+        android:left="10dp"
+        android:top="10dp"
+        android:right="10dp"
+        android:bottom="10dp" />
+
+    <!-- Optional: Define the corner radius to make rounded corners -->
+    <corners android:radius="4dp" />
+</shape>

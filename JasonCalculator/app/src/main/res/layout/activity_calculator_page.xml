@@ -4,8 +4,251 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D4D4D4"
-    tools:context=".CalculatorPage">
+    android:background="@color/md_theme_dark_onSurfaceVariant"
+    android:backgroundTintMode="add"
+    tools:context=".CalculatorPage"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <Button
+        android:id="@+id/button42"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="(-)"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="630dp" />
+
+    <Button
+        android:id="@+id/button38"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="^"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <Button
+        android:id="@+id/button39"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="9"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="449dp" />
+
+    <Button
+        android:id="@+id/button40"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="6"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="510dp" />
+
+    <Button
+        android:id="@+id/button41"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="3"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <Button
+        android:id="@+id/button34"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="8"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="449dp" />
+
+    <Button
+        android:id="@+id/button36"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="2"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <Button
+        android:id="@+id/button35"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="5"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="510dp" />
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="Clear"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <Button
+        android:id="@+id/button37"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="."
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="630dp" />
+
+    <Button
+        android:id="@+id/button31"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="+"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="="
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="630dp" />
+
+    <Button
+        android:id="@+id/button28"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="/"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="319dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+    <Button
+        android:id="@+id/button29"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="X"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="319dp"
+        tools:layout_editor_absoluteY="450dp" />
+
+    <Button
+        android:id="@+id/button30"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="-"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="319dp"
+        tools:layout_editor_absoluteY="511dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -32,12 +275,95 @@
         android:id="@+id/display"
         android:layout_width="366dp"
         android:layout_height="250dp"
-        android:background="#F1BBA2"
+        android:layout_margin="10dp"
+        android:padding="10dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintVertical_bias="0.23"
+        android:background="@drawable/textview_border" />
     />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="Del"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <Button
+        android:id="@+id/button27"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="7"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="449dp" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="4"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="510dp" />
+
+    <Button
+        android:id="@+id/button24"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="1"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+    <Button
+        android:id="@+id/button25"
+        android:layout_width="@dimen/number_button_width"
+        android:layout_height="@dimen/number_button_height"
+        android:background="@color/design_default_color_on_secondary"
+        android:backgroundTint="@color/md_theme_dark_onError"
+        android:shadowColor="#000000"
+        android:text="0"
+        android:textColorLink="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        app:barrierMargin="@dimen/number_button_margin"
+        app:iconTint="@color/md_theme_dark_inverseSurface"
+        app:rippleColor="@color/md_theme_dark_onBackground"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="630dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
