@@ -11,9 +11,11 @@
     tools:layout_editor_absoluteY="0dp">
 
     <Button
-        android:id="@+id/button42"
+        android:id="@+id/btnNeg"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="61dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -22,14 +24,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="630dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnEnter"
+        app:layout_constraintStart_toEndOf="@+id/btnDot"
+        app:layout_constraintTop_toBottomOf="@+id/btn3"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button38"
+        android:id="@+id/btnExpo"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="15dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -38,14 +44,19 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="394dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn9"
+        app:layout_constraintEnd_toStartOf="@+id/btnDivide"
+        app:layout_constraintStart_toEndOf="@+id/btnCl"
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button39"
+        android:id="@+id/btn9"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="21dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -54,14 +65,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="449dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button40"
+        app:layout_constraintEnd_toStartOf="@+id/btnMultiply"
+        app:layout_constraintStart_toEndOf="@+id/btn8"
+        app:layout_constraintTop_toBottomOf="@+id/btnExpo"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
         android:id="@+id/button40"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -70,14 +85,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="510dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn3"
+        app:layout_constraintEnd_toStartOf="@+id/btnSub"
+        app:layout_constraintStart_toEndOf="@+id/btn5"
+        app:layout_constraintTop_toBottomOf="@+id/btn9"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button41"
+        android:id="@+id/btn3"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -86,14 +105,19 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="570dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnNeg"
+        app:layout_constraintEnd_toStartOf="@+id/btnAdd"
+        app:layout_constraintStart_toEndOf="@+id/button36"
+        app:layout_constraintTop_toBottomOf="@+id/button40"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button34"
+        android:id="@+id/btn8"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="21dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -102,14 +126,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="449dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
+        app:layout_constraintEnd_toStartOf="@+id/btn9"
+        app:layout_constraintStart_toEndOf="@+id/btn7"
+        app:layout_constraintTop_toBottomOf="@+id/btnCl"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
         android:id="@+id/button36"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -118,14 +146,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="570dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnDot"
+        app:layout_constraintEnd_toStartOf="@+id/btn3"
+        app:layout_constraintStart_toEndOf="@+id/btnDel4"
+        app:layout_constraintTop_toBottomOf="@+id/btn5"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button35"
+        android:id="@+id/btn5"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -134,14 +166,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="510dp" />
+        app:layout_constraintBottom_toTopOf="@+id/button36"
+        app:layout_constraintEnd_toStartOf="@+id/button40"
+        app:layout_constraintStart_toEndOf="@+id/btn4"
+        app:layout_constraintTop_toBottomOf="@+id/btn8"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button33"
+        android:id="@+id/btnCl"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="15dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -150,14 +186,20 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="394dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button37"
+        android:id="@+id/btnDot"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="61dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -166,14 +208,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="630dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNeg"
+        app:layout_constraintStart_toEndOf="@+id/btn0"
+        app:layout_constraintTop_toBottomOf="@+id/button36"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button31"
+        android:id="@+id/btnAdd"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -182,14 +228,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="318dp"
-        tools:layout_editor_absoluteY="570dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnEnter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@+id/btnSub"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button32"
+        android:id="@+id/btnEnter"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="61dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -198,14 +248,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="318dp"
-        tools:layout_editor_absoluteY="630dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnNeg"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button28"
+        android:id="@+id/btnDivide"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="15dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -214,14 +268,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="319dp"
-        tools:layout_editor_absoluteY="395dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnMultiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnExpo"
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button29"
+        android:id="@+id/btnMultiply"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="21dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -230,14 +288,18 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="319dp"
-        tools:layout_editor_absoluteY="450dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnSub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn9"
+        app:layout_constraintTop_toBottomOf="@+id/btnDivide"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button30"
+        android:id="@+id/btnSub"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="19dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -246,15 +308,17 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="319dp"
-        tools:layout_editor_absoluteY="511dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button40"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultiply"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="366dp"
-        android:layout_height="53dp"
-        android:background="@color/md_theme_dark_surfaceTint"
+        android:layout_width="383dp"
+        android:layout_height="76dp"
+        android:background="@drawable/title"
         android:shadowColor="#66000000"
         android:shadowDx="2"
         android:shadowDy="2"
@@ -262,14 +326,14 @@
         android:text="Big Brain Calculator"
         android:textAlignment="center"
         android:textColor="@color/md_theme_dark_secondaryContainer"
-        android:textSize="34sp"
+        android:textSize="38sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <TextView
         android:id="@+id/display"
@@ -284,12 +348,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.23"
         android:background="@drawable/textview_border" />
-    />
+
+
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnDel"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="15dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -298,14 +365,20 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="394dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn7"
+        app:layout_constraintEnd_toStartOf="@+id/btnCl"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/display"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button27"
+        android:id="@+id/btn7"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginStart="23dp"
+        android:layout_marginBottom="21dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -314,14 +387,19 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="449dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn4"
+        app:layout_constraintEnd_toStartOf="@+id/btn8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDel"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button23"
+        android:id="@+id/btn4"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -330,14 +408,19 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="510dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnDel4"
+        app:layout_constraintEnd_toStartOf="@+id/btn5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn7"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button24"
+        android:id="@+id/btnDel4"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="20dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -346,14 +429,19 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="570dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn0"
+        app:layout_constraintEnd_toStartOf="@+id/button36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn4"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button25"
+        android:id="@+id/btn0"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="61dp"
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
@@ -362,8 +450,10 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:rippleColor="@color/md_theme_dark_onBackground"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="630dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDel4"
+        app:rippleColor="@color/md_theme_dark_onBackground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

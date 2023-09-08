@@ -1,5 +1,6 @@
 package com.example.jasoncalculator;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,12 +16,12 @@ public class CalculatorPage extends AppCompatActivity {
     private double operand1 = 0;
     private String operator = "";
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //display = findViewById(R.id.display);
-        //GridLayout buttonsGrid = findViewById(R.id.buttonsGrid);
+        display = findViewById(R.id.display);
 
         // Set click listeners for number buttons
         for (int i = 0; i <= 9; i++) {
@@ -33,51 +34,61 @@ public class CalculatorPage extends AppCompatActivity {
                 }
             });
         }
-
-       /* findViewById(R.id.btnAdd).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnAdd).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onOperatorButtonClick(view, "+");
             }
         });
 
-        findViewById(R.id.btnMinus).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnDot).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onOperatorButtonClick(view, "+");
+                onOperatorButtonClick(view, ".");
+            }
+        });
+        findViewById(R.id.btnSub).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onOperatorButtonClick(view, "-");
             }
         });
 
         findViewById(R.id.btnMultiply).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onOperatorButtonClick(view, "+");
+                onOperatorButtonClick(view, "*");
             }
         });
 
         findViewById(R.id.btnDivide).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onOperatorButtonClick(view, "+");
+                onOperatorButtonClick(view, "/");
             }
         });
 
-        findViewById(R.id.btnExponent).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnExpo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onOperatorButtonClick(view, "+");
+                onOperatorButtonClick(view, "^");
             }
         });
 
-
+        findViewById(R.id.btnNeg).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onOperatorButtonClick(view, "(-)");
+            }
+        });
         // Implement click listener for enter button
-        findViewById(R.id.btnEquals).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnEnter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onEqualsButtonClick(view);
+                performCalculation();
             }
         });
-*/
+
     }
 
     public void onNumberButtonClick(View view) {
@@ -87,7 +98,6 @@ public class CalculatorPage extends AppCompatActivity {
         display.setText(currentInput);
     }
 
-    // Implement onClick methods for operator buttons (+, -, *, /)
     public void onOperatorButtonClick(View view, String newOperator) {
         if (!currentInput.isEmpty()) {
             if (!operator.isEmpty()) {
