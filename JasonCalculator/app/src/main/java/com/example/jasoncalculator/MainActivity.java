@@ -9,21 +9,19 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button navigateButton = findViewById(R.id.button);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener((view) -> {switchScreens(view);});
 
     }
 
-
-    navigateButton.setOnClickListener(new View.OnClickListener() {
-            Intent intent = new Intent(this, CalculatorPage.class);
-            startActivity(intent);
+    public void switchScreens(View view){
+        Intent intent = new Intent(this, CalculatorPage.class);
+        startActivity(intent);
     }
-
-
 }
+
