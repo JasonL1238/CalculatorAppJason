@@ -16,11 +16,10 @@ public class CalculatorPage extends AppCompatActivity {
     private double operand1 = 0;
     private String operator = "";
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_calculator_page);
         display = findViewById(R.id.display);
 
         // Set click listeners for number buttons

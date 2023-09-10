@@ -65,14 +65,14 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:layout_constraintBottom_toTopOf="@+id/button40"
+        app:layout_constraintBottom_toTopOf="@+id/btn6"
         app:layout_constraintEnd_toStartOf="@+id/btnMultiply"
         app:layout_constraintStart_toEndOf="@+id/btn8"
         app:layout_constraintTop_toBottomOf="@+id/btnExpo"
         app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button40"
+        android:id="@+id/btn6"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
         android:layout_marginEnd="29dp"
@@ -107,8 +107,8 @@
         app:iconTint="@color/md_theme_dark_inverseSurface"
         app:layout_constraintBottom_toTopOf="@+id/btnNeg"
         app:layout_constraintEnd_toStartOf="@+id/btnAdd"
-        app:layout_constraintStart_toEndOf="@+id/button36"
-        app:layout_constraintTop_toBottomOf="@+id/button40"
+        app:layout_constraintStart_toEndOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@+id/btn6"
         app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
@@ -133,7 +133,7 @@
         app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/button36"
+        android:id="@+id/btn2"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
         android:layout_marginEnd="25dp"
@@ -148,7 +148,7 @@
         app:iconTint="@color/md_theme_dark_inverseSurface"
         app:layout_constraintBottom_toTopOf="@+id/btnDot"
         app:layout_constraintEnd_toStartOf="@+id/btn3"
-        app:layout_constraintStart_toEndOf="@+id/btnDel4"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
         app:layout_constraintTop_toBottomOf="@+id/btn5"
         app:rippleColor="@color/md_theme_dark_onBackground" />
 
@@ -166,8 +166,8 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:layout_constraintBottom_toTopOf="@+id/button36"
-        app:layout_constraintEnd_toStartOf="@+id/button40"
+        app:layout_constraintBottom_toTopOf="@+id/btn2"
+        app:layout_constraintEnd_toStartOf="@+id/btn6"
         app:layout_constraintStart_toEndOf="@+id/btn4"
         app:layout_constraintTop_toBottomOf="@+id/btn8"
         app:rippleColor="@color/md_theme_dark_onBackground" />
@@ -211,7 +211,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnNeg"
         app:layout_constraintStart_toEndOf="@+id/btn0"
-        app:layout_constraintTop_toBottomOf="@+id/button36"
+        app:layout_constraintTop_toBottomOf="@+id/btn2"
         app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
@@ -310,7 +310,7 @@
         app:iconTint="@color/md_theme_dark_inverseSurface"
         app:layout_constraintBottom_toTopOf="@+id/btnAdd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button40"
+        app:layout_constraintStart_toEndOf="@+id/btn6"
         app:layout_constraintTop_toBottomOf="@+id/btnMultiply"
         app:rippleColor="@color/md_theme_dark_onBackground" />
 
@@ -408,14 +408,14 @@
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
-        app:layout_constraintBottom_toTopOf="@+id/btnDel4"
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
         app:layout_constraintEnd_toStartOf="@+id/btn5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn7"
         app:rippleColor="@color/md_theme_dark_onBackground" />
 
     <Button
-        android:id="@+id/btnDel4"
+        android:id="@+id/btn1"
         android:layout_width="@dimen/number_button_width"
         android:layout_height="@dimen/number_button_height"
         android:layout_marginStart="23dp"
@@ -430,7 +430,7 @@
         app:barrierMargin="@dimen/number_button_margin"
         app:iconTint="@color/md_theme_dark_inverseSurface"
         app:layout_constraintBottom_toTopOf="@+id/btn0"
-        app:layout_constraintEnd_toStartOf="@+id/button36"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn4"
         app:rippleColor="@color/md_theme_dark_onBackground" />
@@ -453,7 +453,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDot"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDel4"
+        app:layout_constraintTop_toBottomOf="@+id/btn1"
         app:rippleColor="@color/md_theme_dark_onBackground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
