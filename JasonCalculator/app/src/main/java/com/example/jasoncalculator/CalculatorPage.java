@@ -12,9 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class CalculatorPage extends AppCompatActivity {
 
     private TextView display;
-    private String currentInput = "";
+    private StringBuilder currentInput = new StringBuilder();
     private double operand1 = 0;
     private String operator = "";
+
+    private StringBuilder totalInputs = new StringBuilder();
+
+    private boolean canDeleteTotal = true;
+    private boolean justEntered = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +27,20 @@ public class CalculatorPage extends AppCompatActivity {
         setContentView(R.layout.activity_calculator_page);
         display = findViewById(R.id.display);
 
-        // Set click listeners for number buttons
+        setupNumberButtons();
+        setupOperatorButtons();
+        setupControlButtons();
+    }
+
+    private void setupNumberButtons() {
         for (int i = 0; i <= 9; i++) {
             int buttonId = getResources().getIdentifier("btn" + i, "id", getPackageName());
             Button button = findViewById(buttonId);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    onNumberButtonClick(view);
-                }
-            });
+            button.setOnClickListener(view -> onNumberButtonClick(view));
         }
+    }
+
+    private void setupOperatorButtons() {
         findViewById(R.id.btnAdd).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,40 +88,64 @@ public class CalculatorPage extends AppCompatActivity {
                 onOperatorButtonClick(view, "(-)");
             }
         });
-        // Implement click listener for enter button
-        findViewById(R.id.btnEnter).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                performCalculation();
-            }
-        });
+    }
 
+    private void setupControlButtons() {
+        findViewById(R.id.btnEnter).setOnClickListener(view -> performCalculation());
+        findViewById(R.id.btnCl).setOnClickListener(view -> clearInputs());
+        findViewById(R.id.btnDel).setOnClickListener(view -> deleteLastCharacter());
     }
 
     public void onNumberButtonClick(View view) {
         Button button = (Button) view;
         String buttonText = button.getText().toString();
-        currentInput += buttonText;
-        display.setText(currentInput);
+        if (justEntered) {
+            currentInput = new StringBuilder(buttonText);
+            justEntered = false;
+        } else {
+            currentInput.append(buttonText);
+        }
+        totalInputs.append(buttonText);
+        display.setText(totalInputs.toString());
     }
 
     public void onOperatorButtonClick(View view, String newOperator) {
-        if (!currentInput.isEmpty()) {
+        if (currentInput.length() > 0) {
             if (!operator.isEmpty()) {
-                // An operator was already selected, perform the previous calculation
                 performCalculation();
             }
-            operand1 = Double.parseDouble(currentInput);
+            operand1 = Double.parseDouble(currentInput.toString());
             operator = newOperator;
-            currentInput = "";
-            display.setText("");
+            currentInput.setLength(0);
+            totalInputs.append(operator);
+            display.setText(totalInputs.toString());
         }
     }
 
+    private void clearInputs() {
+        display.setText("");
+        currentInput.setLength(0);
+        operand1 = 0;
+        operator = "";
+        totalInputs.setLength(0);
+    }
+
+    private void deleteLastCharacter() {
+        if (currentInput.length() > 0 && canDeleteTotal) {
+            currentInput.setLength(currentInput.length() - 1);
+            totalInputs.setLength(totalInputs.length() - 1);
+            display.setText(totalInputs.toString());
+        }
+    }
 
     private void performCalculation() {
+        if (currentInput.length() == 0 || operator.isEmpty()) {
+            display.setText("Error: Invalid Input");
+            return;
+        }
+
         double result = 0;
-        double operand2 = Double.parseDouble(currentInput);
+        double operand2 = Double.parseDouble(currentInput.toString());
 
         switch (operator) {
             case "+":
@@ -131,7 +163,7 @@ public class CalculatorPage extends AppCompatActivity {
                 } else {
                     // Handle division by zero error
                     display.setText("Error");
-                    currentInput = "";
+                    currentInput.setLength(0);
                     operator = "";
                     return;
                 }
@@ -141,9 +173,18 @@ public class CalculatorPage extends AppCompatActivity {
                 break;
         }
 
-        display.setText(String.valueOf(result));
-        currentInput = "";
+        operand1 = 0;
         operator = "";
+        currentInput.setLength(0);
+        totalInputs.append("=").append(result).append("\n");
+        display.setText(totalInputs.toString());
+        canDeleteTotal = false;
+        justEntered = true;
     }
 
 }
+
+
+
+
+
