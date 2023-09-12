@@ -85,13 +85,13 @@ public class CalculatorPage extends AppCompatActivity {
         findViewById(R.id.btnNeg).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onOperatorButtonClick(view, "(-)");
+                onRandClick(view);
             }
         });
     }
 
     private void setupControlButtons() {
-        findViewById(R.id.btnEnter).setOnClickListener(view -> performCalculation());
+        findViewById(R.id.btnEnter).setOnClickListener(view -> performCalculation(false));
         findViewById(R.id.btnCl).setOnClickListener(view -> clearInputs());
         findViewById(R.id.btnDel).setOnClickListener(view -> deleteLastCharacter());
     }
@@ -109,16 +109,36 @@ public class CalculatorPage extends AppCompatActivity {
         display.setText(totalInputs.toString());
     }
 
+    public void onRandClick(View view) {
+
+        int random_int = (int)Math.floor(Math.random() * (101));
+
+        if (justEntered) {
+            currentInput = new StringBuilder(random_int);
+            justEntered = false;
+        } else {
+            currentInput.append(random_int);
+        }
+        totalInputs.append(random_int);
+        display.setText(totalInputs.toString());
+    }
+
     public void onOperatorButtonClick(View view, String newOperator) {
         if (currentInput.length() > 0) {
             if (!operator.isEmpty()) {
-                performCalculation();
+                performCalculation(true);
+                operator = newOperator;
+                totalInputs.append(operator);
+                display.setText(totalInputs.toString());
             }
-            operand1 = Double.parseDouble(currentInput.toString());
-            operator = newOperator;
-            currentInput.setLength(0);
-            totalInputs.append(operator);
-            display.setText(totalInputs.toString());
+            else{
+                operand1 = Double.parseDouble(currentInput.toString());
+                operator = newOperator;
+                currentInput.setLength(0);
+                totalInputs.append(operator);
+                display.setText(totalInputs.toString());
+            }
+
         }
     }
 
@@ -138,7 +158,7 @@ public class CalculatorPage extends AppCompatActivity {
         }
     }
 
-    private void performCalculation() {
+    private void performCalculation(boolean continueInput) {
         if (currentInput.length() == 0 || operator.isEmpty()) {
             display.setText("Error: Invalid Input");
             return;
@@ -173,13 +193,23 @@ public class CalculatorPage extends AppCompatActivity {
                 break;
         }
 
-        operand1 = 0;
+        if(continueInput){
+            operand1 = result;
+            currentInput.setLength(0);
+            currentInput.append(result);
+            totalInputs.append("=").append(result).append("\n").append(result);
+            canDeleteTotal = true;
+        }
+        else{
+            operand1 = 0;
+            currentInput.setLength(0);
+            totalInputs.append("=").append(result).append("\n");
+            canDeleteTotal = false;
+        }
         operator = "";
-        currentInput.setLength(0);
-        totalInputs.append("=").append(result).append("\n");
-        display.setText(totalInputs.toString());
-        canDeleteTotal = false;
         justEntered = true;
+        display.setText(totalInputs.toString());
+
     }
 
 }

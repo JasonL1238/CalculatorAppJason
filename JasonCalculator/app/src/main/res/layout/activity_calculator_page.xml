@@ -19,7 +19,7 @@
         android:background="@color/design_default_color_on_secondary"
         android:backgroundTint="@color/md_theme_dark_onError"
         android:shadowColor="#000000"
-        android:text="(-)"
+        android:text="Rd"
         android:textColorLink="@color/md_theme_dark_inverseSurface"
         android:textSize="18sp"
         app:barrierMargin="@dimen/number_button_margin"
@@ -340,14 +340,15 @@
         android:layout_width="366dp"
         android:layout_height="250dp"
         android:layout_margin="10dp"
+        android:background="@drawable/textview_border"
         android:padding="10dp"
         android:text="TextView"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23"
-        android:background="@drawable/textview_border" />
+        app:layout_constraintVertical_bias="0.23" />
 
 
 
