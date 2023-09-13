@@ -51,7 +51,7 @@ public class CalculatorPage extends AppCompatActivity {
         findViewById(R.id.btnDot).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onOperatorButtonClick(view, ".");
+                onNumberButtonClick(view);
             }
         });
         findViewById(R.id.btnSub).setOnClickListener(new View.OnClickListener() {
@@ -111,7 +111,7 @@ public class CalculatorPage extends AppCompatActivity {
 
     public void onRandClick(View view) {
 
-        int random_int = (int)Math.floor(Math.random() * (101));
+        String random_int = "" + (int)Math.floor(Math.random() * (101));
 
         if (justEntered) {
             currentInput = new StringBuilder(random_int);
